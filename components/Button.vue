@@ -1,13 +1,14 @@
 <script setup lang="ts">
 interface ButtonProps {
-  disabled: boolean;
+  disable: boolean;
 }
 
-defineProps<ButtonProps>();
+const p = defineProps<ButtonProps>();
+console.log("🚀 ~ file: Button.vue:7 ~ p:", p);
 </script>
 
 <template>
-  <button :disabled="disabled" @click="$emit('click')" class="btn">
+  <button :disabled="disable" @click="$emit('click')" class="btn">
     <slot />
   </button>
 </template>

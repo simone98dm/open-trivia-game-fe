@@ -28,11 +28,12 @@ defineProps<AnswerProps>();
   margin: 8px;
   padding: 4px 16px;
   border-radius: 24px;
+  font-size: 32px;
 }
 .correct {
-  border: 1px solid green;
+  color: green;
 }
 .incorrect {
-  border: 1px solid red;
+  color: red;
 }
 </style>

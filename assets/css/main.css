@@ -1,5 +1,11 @@
 body {
     font-family: 'Mooli', sans-serif;
-    width: 750px;
-    margin: auto;
+    margin: 32px;
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        width: 750px;
+        margin: auto;
+    }
 }
