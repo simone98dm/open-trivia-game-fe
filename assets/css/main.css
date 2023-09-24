@@ -1,3 +1,11 @@
+:root {
+    --red: #ff0000;
+    --orange: #ffa500;
+    --blue: #0000ff;
+    --green: #008000;
+    --primary: #007bff;
+}
+
 body {
     font-family: 'Mooli', sans-serif;
     margin: 32px;

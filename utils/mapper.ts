@@ -6,7 +6,7 @@ export function mapToQuestions(data: QuestionsDTO) {
       ({
         ...question,
         id: `q-${i}`,
-        question: decodeURIComponent(question.question),
+        question: atob(question.question),
         answers: mapToAnswer([
           question.correct_answer,
           ...question.incorrect_answers,
@@ -20,7 +20,7 @@ export function mapToAnswer(answers: string[]) {
   const array = answers.map(
     (a, i) =>
       ({
-        value: decodeURIComponent(a),
+        value: atob(a),
         id: `a-${i}`,
         correct: i === 0,
       } as Answer)
