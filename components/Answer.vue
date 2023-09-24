@@ -6,22 +6,32 @@ interface AnswerProps {
   showAnswer: boolean;
 }
 
-defineProps<AnswerProps>();
+const props = defineProps<AnswerProps>();
+
+const parseColor = computed(() => {
+  const match = props.answer.id.match(/(\d+)/);
+  const map = ["blue", "orange", "red", "green"];
+  if (match) {
+    const index = match[0] as unknown as number;
+    return map[index];
+  }
+  return "default";
+});
 </script>
 
 <template>
-  <span
+  <Button
+    :color="parseColor"
     :class="[
       'answer',
       {
         correct: showAnswer && answer.correct,
         incorrect: showAnswer && !answer.correct,
       },
-      { [`${answer.id}`]: !showAnswer },
     ]"
   >
     {{ answer.value }}
-  </span>
+  </Button>
 </template>
 
 <style scoped>
