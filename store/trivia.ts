@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { Question, QuestionsDTO } from "~/models/Question";
+import type { Question, QuestionsDTO } from "~/models/Question";
 
 export const useTriviaStore = defineStore("trivia", {
   state: () => ({
@@ -13,6 +13,10 @@ export const useTriviaStore = defineStore("trivia", {
       const response = await fetch(`${BASE_URL}${API_PATH}`)
         .then((data) => data.json())
         .finally(() => (this.loading = false));
+
+      if (!response) {
+        return;
+      }
 
       this.questions = mapToQuestions(response as QuestionsDTO);
       this.currentQuestion = this.questions[0];

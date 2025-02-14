@@ -1,75 +1,75 @@
-# Nuxt 3 Minimal Starter
+# Open Trivia Game
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This project is a simple trivia game built with Nuxt 3, Pinia, and Vue.js. It fetches trivia questions from an API and allows users to answer them.
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- Fetches trivia questions from an API.
+- Presents questions with multiple-choice answers.
+- Keeps track of the user's score.
+- Provides a clean and user-friendly interface.
 
-```bash
-# npm
-npm install
+## Technologies Used
 
-# pnpm
-pnpm install
+- [Nuxt 3](https://nuxt.com/): A progressive Vue.js framework.
+- [Pinia](https://pinia.vuejs.org/): A Vue.js state management library.
+- [Vue.js](https://vuejs.org/): A JavaScript framework for building user interfaces.
 
-# yarn
-yarn install
+## Prerequisites
 
-# bun
-bun install
-```
+- [Node.js](https://nodejs.org/) (version 18 or higher)
+- [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
 
-## Development Server
+## Installation
 
-Start the development server on `http://localhost:3000`:
+1.  Clone the repository:
 
-```bash
-# npm
-npm run dev
+    ```bash
+    git clone <repository-url>
+    ```
 
-# pnpm
-pnpm run dev
+2.  Navigate to the project directory:
 
-# yarn
-yarn dev
+    ```bash
+    cd open-trivia-game-fe
+    ```
 
-# bun
-bun run dev
-```
+3.  Install the dependencies:
 
-## Production
+    ```bash
+    yarn install
+    # or
+    npm install
+    ```
 
-Build the application for production:
+## Development
 
-```bash
-# npm
-npm run build
+1.  Start the development server:
 
-# pnpm
-pnpm run build
+    ```bash
+    yarn dev
+    # or
+    npm run dev
+    ```
 
-# yarn
-yarn build
+This will start the Nuxt development server, and you can access the application in your browser at `http://localhost:3000`.
 
-# bun
-bun run build
-```
+## State Management
 
-Locally preview production build:
+The application uses [Pinia](https://pinia.vuejs.org/) for state management. The main store is located in [trivia.ts](./store/trivia.ts), which manages the trivia questions, current question index, and user score.
 
-```bash
-# npm
-npm run preview
+## Components
 
-# pnpm
-pnpm run preview
+Key components include:
 
-# yarn
-yarn preview
+- [Answer.vue](./components/Answer.vue): Displays a single answer option.
+- [Button.vue](./components/Button.vue): A reusable button component.
+- [Skeleton.vue](./components/Skeleton.vue): A skeleton loader component for indicating loading states.
 
-# bun
-bun run preview
-```
+## API
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+The application fetches trivia questions from an external API called [Opentdb](https://opentdb.com). The specific API endpoint and configuration can be found in the relevant files (e.g., within the store or a utility function).
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit pull requests or open issues for any bugs or feature requests.

@@ -40,7 +40,7 @@
   background-color: #ccc;
   margin: auto;
   margin-bottom: 8px;
-  width: 500px;
+  width: 300px;
 }
 
 .skeleton-actions {

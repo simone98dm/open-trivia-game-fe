@@ -24,7 +24,7 @@ export enum TypeDTO {
 }
 
 export interface Answer {
-  id: string;
+  id: number;
   value: string;
   correct: boolean;
 }
@@ -33,5 +33,5 @@ export interface Questions extends QuestionsDTO {}
 export interface Question extends QuestionDTO {
   alreadyAnswered: boolean;
   answers: Answer[];
-  id: string;
+  id: number;
 }

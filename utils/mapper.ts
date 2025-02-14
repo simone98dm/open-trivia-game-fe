@@ -1,11 +1,11 @@
-import { QuestionsDTO, Question, Answer } from "~/models/Question";
+import type { QuestionsDTO, Question, Answer } from "~/models/Question";
 
 export function mapToQuestions(data: QuestionsDTO) {
   return data.results.map(
     (question, i) =>
       ({
         ...question,
-        id: `q-${i}`,
+        id: i,
         question: decodeURIComponent(question.question),
         answers: mapToAnswer([
           question.correct_answer,
@@ -21,7 +21,7 @@ export function mapToAnswer(answers: string[]) {
     (a, i) =>
       ({
         value: decodeURIComponent(a),
-        id: `a-${i}`,
+        id: i,
         correct: i === 0,
       } as Answer)
   );
