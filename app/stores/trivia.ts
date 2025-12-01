@@ -40,7 +40,6 @@ export const useTriviaStore = defineStore("trivia", () => {
       const data = await triviaApi.fetchQuestions(params);
 
       if (!data || data.length === 0) {
-        notifyError("Failed to load questions. Please try again.");
         return false;
       }
 
@@ -51,7 +50,6 @@ export const useTriviaStore = defineStore("trivia", () => {
 
       return true;
     } catch (err) {
-      notifyError("An error occurred while loading questions.");
       return false;
     } finally {
       loading.value = false;
