@@ -1,3 +1,4 @@
+// DTO types from API
 export interface QuestionsDTO {
   response_code: number;
   results: QuestionDTO[];
@@ -23,15 +24,27 @@ export enum TypeDTO {
   Multiple = "multiple",
 }
 
+// Domain models
 export interface Answer {
   id: number;
   value: string;
   correct: boolean;
 }
 
-export interface Questions extends QuestionsDTO {}
-export interface Question extends QuestionDTO {
-  alreadyAnswered: boolean;
-  answers: Answer[];
+export interface Question {
   id: number;
+  category: string;
+  type: TypeDTO;
+  difficulty: DifficultyDTO;
+  question: string;
+  answers: Answer[];
+  alreadyAnswered: boolean;
+}
+
+// API request/response types
+export interface FetchQuestionsParams {
+  amount?: number;
+  category?: number;
+  difficulty?: DifficultyDTO;
+  type?: TypeDTO;
 }

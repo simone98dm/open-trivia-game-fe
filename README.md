@@ -1,75 +1,70 @@
-# Open Trivia Game
+# 🧠 Open Trivia Game
 
-This project is a simple trivia game built with Nuxt 3, Pinia, and Vue.js. It fetches trivia questions from an API and allows users to answer them.
+A modern, mobile-first trivia game built with Nuxt 3, featuring beautiful glassmorphism UI and following professional architecture patterns.
 
-## Features
+![Trivia Game](https://img.shields.io/badge/Nuxt-3.15.4-00DC82?style=for-the-badge&logo=nuxt.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38B2AC?style=for-the-badge&logo=tailwind-css)
 
-- Fetches trivia questions from an API.
-- Presents questions with multiple-choice answers.
-- Keeps track of the user's score.
-- Provides a clean and user-friendly interface.
+## ✨ Features
 
-## Technologies Used
+- 🎨 **Modern Glassmorphism UI** - Beautiful glass-like effects with animated backgrounds
+- 📱 **Mobile-First Design** - Optimized for all screen sizes
+- 🏗️ **4-Layer Architecture** - Clean separation of concerns following industry best practices
+- 🎯 **Real-time Scoring** - Track your progress and score
+- 🌈 **Smooth Animations** - Delightful user experience with custom animations
+- ♿ **Accessible** - WCAG compliant with proper focus management
+- 🎭 **Multiple Question Types** - Various categories and difficulty levels
 
-- [Nuxt 3](https://nuxt.com/): A progressive Vue.js framework.
-- [Pinia](https://pinia.vuejs.org/): A Vue.js state management library.
-- [Vue.js](https://vuejs.org/): A JavaScript framework for building user interfaces.
+## 🚀 Getting Started
 
-## Prerequisites
+### Prerequisites
 
-- [Node.js](https://nodejs.org/) (version 18 or higher)
-- [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
+- Node.js 22
+- Yarn or npm
 
-## Installation
+### Installation
 
-1.  Clone the repository:
+```bash
+yarn install
+```
 
-    ```bash
-    git clone <repository-url>
-    ```
+### Development
 
-2.  Navigate to the project directory:
+```bash
+# Start development server
+yarn dev
+```
 
-    ```bash
-    cd open-trivia-game-fe
-    ```
+The app will be available at `http://localhost:3000`
 
-3.  Install the dependencies:
+### Build
 
-    ```bash
-    yarn install
-    # or
-    npm install
-    ```
+```bash
+# Build for production
+yarn build
+# or
+npm run build
 
-## Development
+# Preview production build
+yarn preview
+# or
+npm run preview
+```
 
-1.  Start the development server:
+## 👨‍💻 Author
 
-    ```bash
-    yarn dev
-    # or
-    npm run dev
-    ```
+**Simone Dal Mas**
 
-This will start the Nuxt development server, and you can access the application in your browser at `http://localhost:3000`.
+- Website: [simone98dm.dev](https://simone98dm.dev)
+- GitHub: [@simone98dm](https://github.com/simone98dm)
 
-## State Management
+## 🙏 Acknowledgments
 
-The application uses [Pinia](https://pinia.vuejs.org/) for state management. The main store is located in [trivia.ts](./store/trivia.ts), which manages the trivia questions, current question index, and user score.
+- [Open Trivia Database](https://opentdb.com/) for the API
+- [Nuxt](https://nuxt.com/) for the amazing framework
+- [Tailwind CSS](https://tailwindcss.com/) for the utility classes
 
-## Components
+---
 
-Key components include:
-
-- [Answer.vue](./components/Answer.vue): Displays a single answer option.
-- [Button.vue](./components/Button.vue): A reusable button component.
-- [Skeleton.vue](./components/Skeleton.vue): A skeleton loader component for indicating loading states.
-
-## API
-
-The application fetches trivia questions from an external API called [Opentdb](https://opentdb.com). The specific API endpoint and configuration can be found in the relevant files (e.g., within the store or a utility function).
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit pull requests or open issues for any bugs or feature requests.
+Made with ❤️ and modern web technologies
