@@ -54,8 +54,6 @@ npm run preview
 
 ## 👨‍💻 Author
 
-**Simone Dal Mas**
-
 - Website: [simone98dm.dev](https://simone98dm.dev)
 - GitHub: [@simone98dm](https://github.com/simone98dm)
 
